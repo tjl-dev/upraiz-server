@@ -1,0 +1,31 @@
+{
+  "upraizApp": {
+    "voter": {
+      "home": {
+        "title": "Voters",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Voter",
+        "createOrEditLabel": "Create or edit a Voter",
+        "notFound": "No Voters found"
+      },
+      "created": "A new Voter is created with identifier {{ param }}",
+      "updated": "A Voter is updated with identifier {{ param }}",
+      "deleted": "A Voter is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Voter {{ id }}?"
+      },
+      "detail": {
+        "title": "Voter"
+      },
+      "id": "ID",
+      "email": "Email",
+      "name": "Name",
+      "created": "Created",
+      "active": "Active",
+      "comment": "Comment",
+      "voterPreferences": "Voter Preferences",
+      "voterAccount": "Voter Account",
+      "vote": "Vote"
+    }
+  }
+}

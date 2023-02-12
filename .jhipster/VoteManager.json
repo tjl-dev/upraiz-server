@@ -1,0 +1,70 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065703",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vote_manager",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VoteManager",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voteManagerPreferences",
+      "otherEntityRelationshipName": "voteManager",
+      "ownerSide": true,
+      "relationshipName": "voteManagerPreferences",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "managedAccount",
+      "otherEntityRelationshipName": "voteManager",
+      "relationshipName": "managedAccount",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "voteTarget",
+      "otherEntityRelationshipName": "voteManager",
+      "relationshipName": "voteTarget",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "accountReclaimRequest",
+      "otherEntityRelationshipName": "voteManager",
+      "relationshipName": "accountReclaimRequest",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "accountReclaimPayout",
+      "otherEntityRelationshipName": "voteManager",
+      "relationshipName": "accountReclaimPayout",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

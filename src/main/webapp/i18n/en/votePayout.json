@@ -1,0 +1,28 @@
+{
+  "upraizApp": {
+    "votePayout": {
+      "home": {
+        "title": "Vote Payouts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vote Payout",
+        "createOrEditLabel": "Create or edit a Vote Payout",
+        "notFound": "No Vote Payouts found"
+      },
+      "created": "A new Vote Payout is created with identifier {{ param }}",
+      "updated": "A Vote Payout is updated with identifier {{ param }}",
+      "deleted": "A Vote Payout is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vote Payout {{ id }}?"
+      },
+      "detail": {
+        "title": "Vote Payout"
+      },
+      "id": "ID",
+      "paidTime": "Paid Time",
+      "paidAmount": "Paid Amount",
+      "paidCcy": "Paid Ccy",
+      "voterAccount": "Voter Account",
+      "vote": "Vote"
+    }
+  }
+}
