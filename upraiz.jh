@@ -1,0 +1,156 @@
+
+application {
+  config {
+    baseName upraiz,
+    applicationType monolith,
+    packageName dev.npass.upraiz,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework vue
+    serverPort 8090
+  }
+  entities *
+}
+
+enum VoteTargetType {
+    POST, COMMENT
+}
+
+enum VoteCcy {
+    XNO //, LTC, XMR, LN
+}
+
+entity VoteManager {
+	email String required
+    name String required
+    created ZonedDateTime
+    active Boolean
+    comment String
+}
+
+entity VoteManagerPreferences {
+	payCcy VoteCcy 
+}
+
+entity Voter {
+	email String required
+    name String required
+    created ZonedDateTime
+    active Boolean
+    comment String
+}
+
+entity VoterPreferences {
+	receiveCcy VoteCcy 
+}
+
+entity ManagedAccount {
+	accountName String
+	ccy VoteCcy required
+    address String required
+    seed String required
+}
+
+entity VoterAccount {
+	accountname String
+	ccy VoteCcy required
+    address String required
+}
+
+entity VoteTarget {
+	url String required
+    votetype VoteTargetType required
+    payout Double required
+    ccy VoteCcy required   
+    comment String
+    active Boolean
+    funded Boolean
+    created ZonedDateTime
+    expiry ZonedDateTime
+    boosted Boolean
+}
+
+entity Vote {
+	votedTimestamp ZonedDateTime required
+	verified Boolean required
+    verifiedTime ZonedDateTime required
+    verifiedBy String required
+    paid Boolean required
+}
+
+entity VotePayout {
+    paidTime ZonedDateTime required
+    paidAmount Double required
+    paidCcy VoteCcy required
+}
+
+entity AccountReclaimRequest {
+	amount Double required
+    timestamp ZonedDateTime required
+    ccy VoteCcy required
+    active Boolean
+}
+
+entity AccountReclaimPayout {
+	amount Double required
+    timestamp ZonedDateTime required
+    ccy VoteCcy required
+    txnRef String required
+}
+
+relationship OneToOne {
+  VoteManager to VoteManagerPreferences
+}
+
+relationship OneToMany {
+  VoteManager to ManagedAccount
+}
+
+relationship OneToMany {
+  VoteManager to VoteTarget
+}
+ 
+relationship OneToOne {
+  Voter to VoterPreferences
+}
+
+relationship OneToMany {
+  Voter to VoterAccount
+}
+
+relationship OneToMany {
+  Voter to Vote
+}
+
+relationship OneToOne {
+  Vote to VoteTarget
+}
+  
+relationship OneToOne {
+  Vote to VotePayout
+}
+
+relationship ManyToOne {
+  VotePayout to VoterAccount
+}
+
+relationship OneToMany {
+  VoteManager to AccountReclaimRequest
+}
+
+relationship ManyToOne {
+  AccountReclaimRequest to ManagedAccount
+}
+
+relationship OneToOne {
+  AccountReclaimRequest to AccountReclaimPayout
+}
+
+relationship OneToOne {
+  AccountReclaimPayout to ManagedAccount
+}
+
+relationship OneToMany {
+  VoteManager to AccountReclaimPayout
+}
+
