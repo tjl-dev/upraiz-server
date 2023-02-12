@@ -1,0 +1,56 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212064403",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "account_reclaim_request",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "timestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ccy",
+      "fieldType": "VoteCcy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "XNO"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AccountReclaimRequest",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "accountReclaimPayout",
+      "otherEntityRelationshipName": "accountReclaimRequest",
+      "ownerSide": true,
+      "relationshipName": "accountReclaimPayout",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "managedAccount",
+      "otherEntityRelationshipName": "accountReclaimRequest",
+      "relationshipName": "managedAccount",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "voteManager",
+      "otherEntityRelationshipName": "accountReclaimRequest",
+      "relationshipName": "voteManager",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

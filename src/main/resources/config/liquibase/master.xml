@@ -17,7 +17,27 @@
     <property name="datetimeType" value="datetime" dbms="postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064354_added_entity_VoteManager.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064355_added_entity_VoteManagerPreferences.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064356_added_entity_Voter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064357_added_entity_VoterPreferences.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064358_added_entity_ManagedAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064359_added_entity_VoterAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064400_added_entity_VoteTarget.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064401_added_entity_Vote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064402_added_entity_VotePayout.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064403_added_entity_AccountReclaimRequest.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064404_added_entity_AccountReclaimPayout.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20230212064354_added_entity_constraints_VoteManager.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064356_added_entity_constraints_Voter.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064358_added_entity_constraints_ManagedAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064359_added_entity_constraints_VoterAccount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064400_added_entity_constraints_VoteTarget.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064401_added_entity_constraints_Vote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064402_added_entity_constraints_VotePayout.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064403_added_entity_constraints_AccountReclaimRequest.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20230212064404_added_entity_constraints_AccountReclaimPayout.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
 </databaseChangeLog>

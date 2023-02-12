@@ -7,6 +7,17 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
+        "voteManager": "Vote Manager",
+        "voteManagerPreferences": "Vote Manager Preferences",
+        "voter": "Voter",
+        "voterPreferences": "Voter Preferences",
+        "managedAccount": "Managed Account",
+        "voterAccount": "Voter Account",
+        "voteTarget": "Vote Target",
+        "vote": "Vote",
+        "votePayout": "Vote Payout",
+        "accountReclaimRequest": "Account Reclaim Request",
+        "accountReclaimPayout": "Account Reclaim Payout",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

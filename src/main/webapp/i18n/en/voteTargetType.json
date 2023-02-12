@@ -1,0 +1,9 @@
+{
+  "upraizApp": {
+    "VoteTargetType": {
+      "null": "",
+      "POST": "POST",
+      "COMMENT": "COMMENT"
+    }
+  }
+}

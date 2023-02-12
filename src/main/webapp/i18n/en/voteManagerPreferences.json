@@ -1,0 +1,25 @@
+{
+  "upraizApp": {
+    "voteManagerPreferences": {
+      "home": {
+        "title": "Vote Manager Preferences",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vote Manager Preferences",
+        "createOrEditLabel": "Create or edit a Vote Manager Preferences",
+        "notFound": "No Vote Manager Preferences found"
+      },
+      "created": "A new Vote Manager Preferences is created with identifier {{ param }}",
+      "updated": "A Vote Manager Preferences is updated with identifier {{ param }}",
+      "deleted": "A Vote Manager Preferences is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vote Manager Preferences {{ id }}?"
+      },
+      "detail": {
+        "title": "Vote Manager Preferences"
+      },
+      "id": "ID",
+      "payCcy": "Pay Ccy",
+      "voteManager": "Vote Manager"
+    }
+  }
+}

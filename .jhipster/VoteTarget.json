@@ -1,0 +1,76 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212064400",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vote_target",
+  "fields": [
+    {
+      "fieldName": "url",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "votetype",
+      "fieldType": "VoteTargetType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "POST,COMMENT"
+    },
+    {
+      "fieldName": "payout",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ccy",
+      "fieldType": "VoteCcy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "XNO"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "funded",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "expiry",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "boosted",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VoteTarget",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "vote",
+      "otherEntityRelationshipName": "voteTarget",
+      "ownerSide": false,
+      "relationshipName": "vote",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "voteManager",
+      "otherEntityRelationshipName": "voteTarget",
+      "relationshipName": "voteManager",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

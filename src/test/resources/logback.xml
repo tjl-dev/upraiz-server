@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="dev.npass.upraiz" level="INFO"/>
+    <logger name="dev.npass" level="INFO"/>
 
     <logger name="tech.jhipster" level="WARN"/>
 

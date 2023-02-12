@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <!--
+        Added the constraints for entity AccountReclaimRequest.
+    -->
+    <changeSet id="20230212064403-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="account_reclaim_payout_id"
+                                 baseTableName="account_reclaim_request"
+                                 constraintName="fk_account_reclaim_request__account_reclaim_payout_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="account_reclaim_payout"/>
+
+        <addForeignKeyConstraint baseColumnNames="managed_account_id"
+                                 baseTableName="account_reclaim_request"
+                                 constraintName="fk_account_reclaim_request__managed_account_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="managed_account"/>
+
+        <addForeignKeyConstraint baseColumnNames="vote_manager_id"
+                                 baseTableName="account_reclaim_request"
+                                 constraintName="fk_account_reclaim_request__vote_manager_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vote_manager"/>
+    </changeSet>
+</databaseChangeLog>

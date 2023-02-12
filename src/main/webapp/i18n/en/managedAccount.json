@@ -1,0 +1,30 @@
+{
+  "upraizApp": {
+    "managedAccount": {
+      "home": {
+        "title": "Managed Accounts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Managed Account",
+        "createOrEditLabel": "Create or edit a Managed Account",
+        "notFound": "No Managed Accounts found"
+      },
+      "created": "A new Managed Account is created with identifier {{ param }}",
+      "updated": "A Managed Account is updated with identifier {{ param }}",
+      "deleted": "A Managed Account is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Managed Account {{ id }}?"
+      },
+      "detail": {
+        "title": "Managed Account"
+      },
+      "id": "ID",
+      "accountName": "Account Name",
+      "ccy": "Ccy",
+      "address": "Address",
+      "seed": "Seed",
+      "accountReclaimPayout": "Account Reclaim Payout",
+      "voteManager": "Vote Manager",
+      "accountReclaimRequest": "Account Reclaim Request"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212064401",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vote",
+  "fields": [
+    {
+      "fieldName": "votedTimestamp",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "verified",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "verifiedTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "verifiedBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paid",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Vote",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voteTarget",
+      "otherEntityRelationshipName": "vote",
+      "ownerSide": true,
+      "relationshipName": "voteTarget",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "votePayout",
+      "otherEntityRelationshipName": "vote",
+      "ownerSide": true,
+      "relationshipName": "votePayout",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "voter",
+      "otherEntityRelationshipName": "vote",
+      "relationshipName": "voter",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

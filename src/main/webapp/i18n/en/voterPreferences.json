@@ -1,0 +1,25 @@
+{
+  "upraizApp": {
+    "voterPreferences": {
+      "home": {
+        "title": "Voter Preferences",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Voter Preferences",
+        "createOrEditLabel": "Create or edit a Voter Preferences",
+        "notFound": "No Voter Preferences found"
+      },
+      "created": "A new Voter Preferences is created with identifier {{ param }}",
+      "updated": "A Voter Preferences is updated with identifier {{ param }}",
+      "deleted": "A Voter Preferences is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Voter Preferences {{ id }}?"
+      },
+      "detail": {
+        "title": "Voter Preferences"
+      },
+      "id": "ID",
+      "receiveCcy": "Receive Ccy",
+      "voter": "Voter"
+    }
+  }
+}

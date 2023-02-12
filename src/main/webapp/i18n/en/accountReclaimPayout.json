@@ -1,0 +1,30 @@
+{
+  "upraizApp": {
+    "accountReclaimPayout": {
+      "home": {
+        "title": "Account Reclaim Payouts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Account Reclaim Payout",
+        "createOrEditLabel": "Create or edit a Account Reclaim Payout",
+        "notFound": "No Account Reclaim Payouts found"
+      },
+      "created": "A new Account Reclaim Payout is created with identifier {{ param }}",
+      "updated": "A Account Reclaim Payout is updated with identifier {{ param }}",
+      "deleted": "A Account Reclaim Payout is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Account Reclaim Payout {{ id }}?"
+      },
+      "detail": {
+        "title": "Account Reclaim Payout"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "timestamp": "Timestamp",
+      "ccy": "Ccy",
+      "txnRef": "Txn Ref",
+      "managedAccount": "Managed Account",
+      "accountReclaimRequest": "Account Reclaim Request",
+      "voteManager": "Vote Manager"
+    }
+  }
+}

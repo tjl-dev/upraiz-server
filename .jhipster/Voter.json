@@ -1,0 +1,58 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212064356",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "voter",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "active",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Voter",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voterPreferences",
+      "otherEntityRelationshipName": "voter",
+      "ownerSide": true,
+      "relationshipName": "voterPreferences",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "voterAccount",
+      "otherEntityRelationshipName": "voter",
+      "relationshipName": "voterAccount",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "vote",
+      "otherEntityRelationshipName": "voter",
+      "relationshipName": "vote",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}
