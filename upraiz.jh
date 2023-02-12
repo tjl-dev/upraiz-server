@@ -1,0 +1,115 @@
+
+application {
+  config {
+    baseName upraiz,
+    applicationType monolith,
+    packageName dev.npass,
+    authenticationType jwt,
+    prodDatabaseType postgresql,
+    clientFramework vue
+  }
+  entities *
+}
+
+enum VoteTargetType {
+    POST, COMMENT
+}
+
+enum VoteCcy {
+    XNO //, LTC, XMR, LN
+}
+
+entity UserPreferences {
+	payCcy VoteCcy
+}
+
+entity Voter {
+	email String required
+}
+
+entity VoterPreferences {
+	receiveCcy VoteCcy 
+}
+
+entity ManagedAccount {
+	accountName String
+	ccy VoteCcy required
+    address String required
+    seed String required
+}
+
+entity VoterAccount {
+	accountname String
+	ccy VoteCcy required
+    address String required
+}
+
+entity VoteTarget {
+	url String required
+    votetype VoteTargetType required
+    payout Double required
+    ccy VoteCcy required   
+    comment String
+    active Boolean
+    funded Boolean
+    created ZonedDateTime
+    expiry ZonedDateTime
+    boosted Boolean
+}
+
+entity Vote {
+	votedTimestamp ZonedDateTime required
+	verified Boolean required
+    verifiedTime ZonedDateTime required
+    verifiedBy String required
+    paid Boolean required
+}
+
+entity VotePayout {
+    paidTime ZonedDateTime required
+    paidAmount Double required
+    paidCcy VoteCcy required
+}
+
+entity AccountReclaimRequest {
+	amount Double
+    timestamp ZonedDateTime
+    ccy VoteCcy
+}
+
+relationship OneToOne {
+  User to UserPreferences
+}
+
+relationship OneToMany {
+  User to ManagedAccount
+}
+ 
+relationship OneToOne {
+  Voter to VoterPreferences
+}
+
+relationship OneToMany {
+  Voter to VoterAccount
+}
+
+relationship OneToMany {
+  User to Vote
+}
+
+relationship OneToMany {
+  Voter to Vote
+}
+
+relationship OneToOne {
+  Vote to VoteTarget
+}
+  
+relationship OneToOne {
+  Vote to VotePayout
+}
+
+relationship ManyToOne {
+  VotePayout to VoterAccount
+}
+
