@@ -1,0 +1,30 @@
+{
+  "upraizApp": {
+    "accountReclaimRequest": {
+      "home": {
+        "title": "Account Reclaim Requests",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Account Reclaim Request",
+        "createOrEditLabel": "Create or edit a Account Reclaim Request",
+        "notFound": "No Account Reclaim Requests found"
+      },
+      "created": "A new Account Reclaim Request is created with identifier {{ param }}",
+      "updated": "A Account Reclaim Request is updated with identifier {{ param }}",
+      "deleted": "A Account Reclaim Request is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Account Reclaim Request {{ id }}?"
+      },
+      "detail": {
+        "title": "Account Reclaim Request"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "timestamp": "Timestamp",
+      "ccy": "Ccy",
+      "active": "Active",
+      "accountReclaimPayout": "Account Reclaim Payout",
+      "managedAccount": "Managed Account",
+      "voteManager": "Vote Manager"
+    }
+  }
+}

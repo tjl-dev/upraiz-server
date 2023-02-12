@@ -1,0 +1,56 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065707",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "managed_account",
+  "fields": [
+    {
+      "fieldName": "accountName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ccy",
+      "fieldType": "VoteCcy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "XNO"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "seed",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ManagedAccount",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "accountReclaimPayout",
+      "otherEntityRelationshipName": "managedAccount",
+      "ownerSide": false,
+      "relationshipName": "accountReclaimPayout",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "voteManager",
+      "otherEntityRelationshipName": "managedAccount",
+      "relationshipName": "voteManager",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "accountReclaimRequest",
+      "otherEntityRelationshipName": "managedAccount",
+      "relationshipName": "accountReclaimRequest",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

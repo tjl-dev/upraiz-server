@@ -1,0 +1,29 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065706",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "voter_preferences",
+  "fields": [
+    {
+      "fieldName": "receiveCcy",
+      "fieldType": "VoteCcy",
+      "fieldValues": "XNO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VoterPreferences",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voter",
+      "otherEntityRelationshipName": "voterPreferences",
+      "ownerSide": false,
+      "relationshipName": "voter",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

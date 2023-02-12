@@ -1,0 +1,44 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065708",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "voter_account",
+  "fields": [
+    {
+      "fieldName": "accountname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ccy",
+      "fieldType": "VoteCcy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "XNO"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VoterAccount",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voter",
+      "otherEntityRelationshipName": "voterAccount",
+      "relationshipName": "voter",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "votePayout",
+      "otherEntityRelationshipName": "voterAccount",
+      "relationshipName": "votePayout",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

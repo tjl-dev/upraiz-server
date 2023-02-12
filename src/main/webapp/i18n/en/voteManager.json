@@ -1,0 +1,33 @@
+{
+  "upraizApp": {
+    "voteManager": {
+      "home": {
+        "title": "Vote Managers",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vote Manager",
+        "createOrEditLabel": "Create or edit a Vote Manager",
+        "notFound": "No Vote Managers found"
+      },
+      "created": "A new Vote Manager is created with identifier {{ param }}",
+      "updated": "A Vote Manager is updated with identifier {{ param }}",
+      "deleted": "A Vote Manager is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vote Manager {{ id }}?"
+      },
+      "detail": {
+        "title": "Vote Manager"
+      },
+      "id": "ID",
+      "email": "Email",
+      "name": "Name",
+      "created": "Created",
+      "active": "Active",
+      "comment": "Comment",
+      "voteManagerPreferences": "Vote Manager Preferences",
+      "managedAccount": "Managed Account",
+      "voteTarget": "Vote Target",
+      "accountReclaimRequest": "Account Reclaim Request",
+      "accountReclaimPayout": "Account Reclaim Payout"
+    }
+  }
+}

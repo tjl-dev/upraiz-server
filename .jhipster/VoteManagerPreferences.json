@@ -1,0 +1,29 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065704",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vote_manager_preferences",
+  "fields": [
+    {
+      "fieldName": "payCcy",
+      "fieldType": "VoteCcy",
+      "fieldValues": "XNO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VoteManagerPreferences",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voteManager",
+      "otherEntityRelationshipName": "voteManagerPreferences",
+      "ownerSide": false,
+      "relationshipName": "voteManager",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

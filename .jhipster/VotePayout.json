@@ -1,0 +1,46 @@
+{
+  "applications": ["upraiz"],
+  "changelogDate": "20230212065711",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "vote_payout",
+  "fields": [
+    {
+      "fieldName": "paidTime",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paidAmount",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paidCcy",
+      "fieldType": "VoteCcy",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "XNO"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "VotePayout",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "voterAccount",
+      "otherEntityRelationshipName": "votePayout",
+      "relationshipName": "voterAccount",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "vote",
+      "otherEntityRelationshipName": "votePayout",
+      "ownerSide": false,
+      "relationshipName": "vote",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

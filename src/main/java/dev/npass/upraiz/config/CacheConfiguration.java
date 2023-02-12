@@ -11,9 +11,6 @@ import org.springframework.boot.info.BuildProperties;
 import org.springframework.boot.info.GitProperties;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.KeyGenerator;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.context.annotation.*;
 import tech.jhipster.config.JHipsterProperties;
 import tech.jhipster.config.cache.PrefixedKeyGenerator;
@@ -51,6 +48,25 @@ public class CacheConfiguration {
             createCache(cm, dev.npass.upraiz.domain.User.class.getName());
             createCache(cm, dev.npass.upraiz.domain.Authority.class.getName());
             createCache(cm, dev.npass.upraiz.domain.User.class.getName() + ".authorities");
+            createCache(cm, dev.npass.upraiz.domain.VoteManager.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.VoteManager.class.getName() + ".managedAccounts");
+            createCache(cm, dev.npass.upraiz.domain.VoteManager.class.getName() + ".voteTargets");
+            createCache(cm, dev.npass.upraiz.domain.VoteManager.class.getName() + ".accountReclaimRequests");
+            createCache(cm, dev.npass.upraiz.domain.VoteManager.class.getName() + ".accountReclaimPayouts");
+            createCache(cm, dev.npass.upraiz.domain.VoteManagerPreferences.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.Voter.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.Voter.class.getName() + ".voterAccounts");
+            createCache(cm, dev.npass.upraiz.domain.Voter.class.getName() + ".votes");
+            createCache(cm, dev.npass.upraiz.domain.VoterPreferences.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.ManagedAccount.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.ManagedAccount.class.getName() + ".accountReclaimRequests");
+            createCache(cm, dev.npass.upraiz.domain.VoterAccount.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.VoterAccount.class.getName() + ".votePayouts");
+            createCache(cm, dev.npass.upraiz.domain.VoteTarget.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.Vote.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.VotePayout.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.AccountReclaimRequest.class.getName());
+            createCache(cm, dev.npass.upraiz.domain.AccountReclaimPayout.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
