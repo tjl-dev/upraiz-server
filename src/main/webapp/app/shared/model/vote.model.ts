@@ -5,9 +5,9 @@ import { IVoter } from '@/shared/model/voter.model';
 export interface IVote {
   id?: number;
   votedTimestamp?: Date;
-  verified?: boolean;
-  verifiedTime?: Date;
-  verifiedBy?: string;
+  verified?: boolean | null;
+  verifiedTime?: Date | null;
+  verifiedBy?: string | null;
   paid?: boolean;
   voteTarget?: IVoteTarget | null;
   votePayout?: IVotePayout | null;
@@ -18,9 +18,9 @@ export class Vote implements IVote {
   constructor(
     public id?: number,
     public votedTimestamp?: Date,
-    public verified?: boolean,
-    public verifiedTime?: Date,
-    public verifiedBy?: string,
+    public verified?: boolean | null,
+    public verifiedTime?: Date | null,
+    public verifiedBy?: string | null,
     public paid?: boolean,
     public voteTarget?: IVoteTarget | null,
     public votePayout?: IVotePayout | null,

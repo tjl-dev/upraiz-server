@@ -29,16 +29,13 @@ public class Vote implements Serializable {
     @Column(name = "voted_timestamp", nullable = false)
     private ZonedDateTime votedTimestamp;
 
-    @NotNull
-    @Column(name = "verified", nullable = false)
+    @Column(name = "verified")
     private Boolean verified;
 
-    @NotNull
-    @Column(name = "verified_time", nullable = false)
+    @Column(name = "verified_time")
     private ZonedDateTime verifiedTime;
 
-    @NotNull
-    @Column(name = "verified_by", nullable = false)
+    @Column(name = "verified_by")
     private String verifiedBy;
 
     @NotNull

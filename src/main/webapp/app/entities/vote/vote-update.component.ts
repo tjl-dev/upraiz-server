@@ -23,15 +23,9 @@ const validations: any = {
     votedTimestamp: {
       required,
     },
-    verified: {
-      required,
-    },
-    verifiedTime: {
-      required,
-    },
-    verifiedBy: {
-      required,
-    },
+    verified: {},
+    verifiedTime: {},
+    verifiedBy: {},
     paid: {
       required,
     },

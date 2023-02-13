@@ -160,57 +160,6 @@ class VoteResourceIT {
 
     @Test
     @Transactional
-    void checkVerifiedIsRequired() throws Exception {
-        int databaseSizeBeforeTest = voteRepository.findAll().size();
-        // set the field null
-        vote.setVerified(null);
-
-        // Create the Vote, which fails.
-
-        restVoteMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(vote)))
-            .andExpect(status().isBadRequest());
-
-        List<Vote> voteList = voteRepository.findAll();
-        assertThat(voteList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    void checkVerifiedTimeIsRequired() throws Exception {
-        int databaseSizeBeforeTest = voteRepository.findAll().size();
-        // set the field null
-        vote.setVerifiedTime(null);
-
-        // Create the Vote, which fails.
-
-        restVoteMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(vote)))
-            .andExpect(status().isBadRequest());
-
-        List<Vote> voteList = voteRepository.findAll();
-        assertThat(voteList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    void checkVerifiedByIsRequired() throws Exception {
-        int databaseSizeBeforeTest = voteRepository.findAll().size();
-        // set the field null
-        vote.setVerifiedBy(null);
-
-        // Create the Vote, which fails.
-
-        restVoteMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(vote)))
-            .andExpect(status().isBadRequest());
-
-        List<Vote> voteList = voteRepository.findAll();
-        assertThat(voteList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     void checkPaidIsRequired() throws Exception {
         int databaseSizeBeforeTest = voteRepository.findAll().size();
         // set the field null
