@@ -72,9 +72,9 @@ entity VoteTarget {
 
 entity Vote {
 	votedTimestamp ZonedDateTime required
-	verified Boolean required
-    verifiedTime ZonedDateTime required
-    verifiedBy String required
+	verified Boolean 
+    verifiedTime ZonedDateTime 
+    verifiedBy String 
     paid Boolean required
 }
 
