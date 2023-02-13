@@ -12,18 +12,15 @@
     },
     {
       "fieldName": "verified",
-      "fieldType": "Boolean",
-      "fieldValidateRules": ["required"]
+      "fieldType": "Boolean"
     },
     {
       "fieldName": "verifiedTime",
-      "fieldType": "ZonedDateTime",
-      "fieldValidateRules": ["required"]
+      "fieldType": "ZonedDateTime"
     },
     {
       "fieldName": "verifiedBy",
-      "fieldType": "String",
-      "fieldValidateRules": ["required"]
+      "fieldType": "String"
     },
     {
       "fieldName": "paid",

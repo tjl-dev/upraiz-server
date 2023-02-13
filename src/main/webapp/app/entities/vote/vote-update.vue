@@ -52,13 +52,7 @@
               data-cy="verified"
               :class="{ valid: !$v.vote.verified.$invalid, invalid: $v.vote.verified.$invalid }"
               v-model="$v.vote.verified.$model"
-              required
             />
-            <div v-if="$v.vote.verified.$anyDirty && $v.vote.verified.$invalid">
-              <small class="form-text text-danger" v-if="!$v.vote.verified.required" v-text="$t('entity.validation.required')">
-                This field is required.
-              </small>
-            </div>
           </div>
           <div class="form-group">
             <label class="form-control-label" v-text="$t('upraizApp.vote.verifiedTime')" for="vote-verifiedTime">Verified Time</label>
@@ -70,22 +64,9 @@
                 class="form-control"
                 name="verifiedTime"
                 :class="{ valid: !$v.vote.verifiedTime.$invalid, invalid: $v.vote.verifiedTime.$invalid }"
-                required
                 :value="convertDateTimeFromServer($v.vote.verifiedTime.$model)"
                 @change="updateZonedDateTimeField('verifiedTime', $event)"
               />
-            </div>
-            <div v-if="$v.vote.verifiedTime.$anyDirty && $v.vote.verifiedTime.$invalid">
-              <small class="form-text text-danger" v-if="!$v.vote.verifiedTime.required" v-text="$t('entity.validation.required')">
-                This field is required.
-              </small>
-              <small
-                class="form-text text-danger"
-                v-if="!$v.vote.verifiedTime.ZonedDateTimelocal"
-                v-text="$t('entity.validation.ZonedDateTimelocal')"
-              >
-                This field should be a date and time.
-              </small>
             </div>
           </div>
           <div class="form-group">
@@ -98,13 +79,7 @@
               data-cy="verifiedBy"
               :class="{ valid: !$v.vote.verifiedBy.$invalid, invalid: $v.vote.verifiedBy.$invalid }"
               v-model="$v.vote.verifiedBy.$model"
-              required
             />
-            <div v-if="$v.vote.verifiedBy.$anyDirty && $v.vote.verifiedBy.$invalid">
-              <small class="form-text text-danger" v-if="!$v.vote.verifiedBy.required" v-text="$t('entity.validation.required')">
-                This field is required.
-              </small>
-            </div>
           </div>
           <div class="form-group">
             <label class="form-control-label" v-text="$t('upraizApp.vote.paid')" for="vote-paid">Paid</label>

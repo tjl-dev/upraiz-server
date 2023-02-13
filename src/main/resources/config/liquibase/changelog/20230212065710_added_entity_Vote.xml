@@ -18,13 +18,13 @@
                 <constraints nullable="false" />
             </column>
             <column name="verified" type="boolean">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
             <column name="verified_time" type="${datetimeType}">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
             <column name="verified_by" type="varchar(255)">
-                <constraints nullable="false" />
+                <constraints nullable="true" />
             </column>
             <column name="paid" type="boolean">
                 <constraints nullable="false" />
