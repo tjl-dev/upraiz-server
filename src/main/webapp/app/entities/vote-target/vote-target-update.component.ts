@@ -6,9 +6,6 @@ import { DATE_TIME_LONG_FORMAT } from '@/shared/date/filters';
 
 import AlertService from '@/shared/alert/alert.service';
 
-import VoteService from '@/entities/vote/vote.service';
-import { IVote } from '@/shared/model/vote.model';
-
 import VoteManagerService from '@/entities/vote-manager/vote-manager.service';
 import { IVoteManager } from '@/shared/model/vote-manager.model';
 
@@ -49,10 +46,6 @@ export default class VoteTargetUpdate extends Vue {
   @Inject('alertService') private alertService: () => AlertService;
 
   public voteTarget: IVoteTarget = new VoteTarget();
-
-  @Inject('voteService') private voteService: () => VoteService;
-
-  public votes: IVote[] = [];
 
   @Inject('voteManagerService') private voteManagerService: () => VoteManagerService;
 
@@ -165,11 +158,6 @@ export default class VoteTargetUpdate extends Vue {
   }
 
   public initRelationships(): void {
-    this.voteService()
-      .retrieve()
-      .then(res => {
-        this.votes = res.data;
-      });
     this.voteManagerService()
       .retrieve()
       .then(res => {

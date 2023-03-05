@@ -48,7 +48,7 @@ public class AccountReclaimRequest implements Serializable {
     private AccountReclaimPayout accountReclaimPayout;
 
     @ManyToOne
-    @JsonIgnoreProperties(value = { "accountReclaimPayout", "voteManager", "accountReclaimRequests" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "voteManager", "accountReclaimRequests" }, allowSetters = true)
     private ManagedAccount managedAccount;
 
     @ManyToOne

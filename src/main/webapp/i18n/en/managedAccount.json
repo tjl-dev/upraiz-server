@@ -22,7 +22,6 @@
       "ccy": "Ccy",
       "address": "Address",
       "seed": "Seed",
-      "accountReclaimPayout": "Account Reclaim Payout",
       "voteManager": "Vote Manager",
       "accountReclaimRequest": "Account Reclaim Request"
     }

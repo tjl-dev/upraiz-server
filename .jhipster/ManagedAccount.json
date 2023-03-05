@@ -33,13 +33,6 @@
   "readOnly": false,
   "relationships": [
     {
-      "otherEntityName": "accountReclaimPayout",
-      "otherEntityRelationshipName": "managedAccount",
-      "ownerSide": false,
-      "relationshipName": "accountReclaimPayout",
-      "relationshipType": "one-to-one"
-    },
-    {
       "otherEntityName": "voteManager",
       "otherEntityRelationshipName": "managedAccount",
       "relationshipName": "voteManager",

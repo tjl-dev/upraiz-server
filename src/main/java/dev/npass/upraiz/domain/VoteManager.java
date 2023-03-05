@@ -51,12 +51,12 @@ public class VoteManager implements Serializable {
 
     @OneToMany(mappedBy = "voteManager")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "accountReclaimPayout", "voteManager", "accountReclaimRequests" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "voteManager", "accountReclaimRequests" }, allowSetters = true)
     private Set<ManagedAccount> managedAccounts = new HashSet<>();
 
     @OneToMany(mappedBy = "voteManager")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "vote", "voteManager" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "voteManager" }, allowSetters = true)
     private Set<VoteTarget> voteTargets = new HashSet<>();
 
     @OneToMany(mappedBy = "voteManager")

@@ -43,7 +43,7 @@ public class VotePayout implements Serializable {
     @JsonIgnoreProperties(value = { "voter", "votePayouts" }, allowSetters = true)
     private VoterAccount voterAccount;
 
-    @JsonIgnoreProperties(value = { "voteTarget", "votePayout", "voter" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "votePayout", "voteTarget", "voter" }, allowSetters = true)
     @OneToOne(mappedBy = "votePayout")
     private Vote vote;
 

@@ -23,8 +23,8 @@
       "verifiedTime": "Verified Time",
       "verifiedBy": "Verified By",
       "paid": "Paid",
-      "voteTarget": "Vote Target",
       "votePayout": "Vote Payout",
+      "voteTarget": "Vote Target",
       "voter": "Voter"
     }
   }

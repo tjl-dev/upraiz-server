@@ -43,10 +43,6 @@ public class ManagedAccount implements Serializable {
     @Column(name = "seed", nullable = false)
     private String seed;
 
-    @JsonIgnoreProperties(value = { "managedAccount", "accountReclaimRequest", "voteManager" }, allowSetters = true)
-    @OneToOne(mappedBy = "managedAccount")
-    private AccountReclaimPayout accountReclaimPayout;
-
     @ManyToOne
     @JsonIgnoreProperties(
         value = { "voteManagerPreferences", "managedAccounts", "voteTargets", "accountReclaimRequests", "accountReclaimPayouts" },
@@ -124,25 +120,6 @@ public class ManagedAccount implements Serializable {
 
     public void setSeed(String seed) {
         this.seed = seed;
-    }
-
-    public AccountReclaimPayout getAccountReclaimPayout() {
-        return this.accountReclaimPayout;
-    }
-
-    public void setAccountReclaimPayout(AccountReclaimPayout accountReclaimPayout) {
-        if (this.accountReclaimPayout != null) {
-            this.accountReclaimPayout.setManagedAccount(null);
-        }
-        if (accountReclaimPayout != null) {
-            accountReclaimPayout.setManagedAccount(this);
-        }
-        this.accountReclaimPayout = accountReclaimPayout;
-    }
-
-    public ManagedAccount accountReclaimPayout(AccountReclaimPayout accountReclaimPayout) {
-        this.setAccountReclaimPayout(accountReclaimPayout);
-        return this;
     }
 
     public VoteManager getVoteManager() {

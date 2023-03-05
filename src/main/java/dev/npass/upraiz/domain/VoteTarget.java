@@ -63,10 +63,6 @@ public class VoteTarget implements Serializable {
     @Column(name = "boosted")
     private Boolean boosted;
 
-    @JsonIgnoreProperties(value = { "voteTarget", "votePayout", "voter" }, allowSetters = true)
-    @OneToOne(mappedBy = "voteTarget")
-    private Vote vote;
-
     @ManyToOne
     @JsonIgnoreProperties(
         value = { "voteManagerPreferences", "managedAccounts", "voteTargets", "accountReclaimRequests", "accountReclaimPayouts" },
@@ -217,25 +213,6 @@ public class VoteTarget implements Serializable {
 
     public void setBoosted(Boolean boosted) {
         this.boosted = boosted;
-    }
-
-    public Vote getVote() {
-        return this.vote;
-    }
-
-    public void setVote(Vote vote) {
-        if (this.vote != null) {
-            this.vote.setVoteTarget(null);
-        }
-        if (vote != null) {
-            vote.setVoteTarget(this);
-        }
-        this.vote = vote;
-    }
-
-    public VoteTarget vote(Vote vote) {
-        this.setVote(vote);
-        return this;
     }
 
     public VoteManager getVoteManager() {

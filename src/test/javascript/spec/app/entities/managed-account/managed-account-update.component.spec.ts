@@ -9,8 +9,6 @@ import ManagedAccountUpdateComponent from '@/entities/managed-account/managed-ac
 import ManagedAccountClass from '@/entities/managed-account/managed-account-update.component';
 import ManagedAccountService from '@/entities/managed-account/managed-account.service';
 
-import AccountReclaimPayoutService from '@/entities/account-reclaim-payout/account-reclaim-payout.service';
-
 import VoteManagerService from '@/entities/vote-manager/vote-manager.service';
 
 import AccountReclaimRequestService from '@/entities/account-reclaim-request/account-reclaim-request.service';
@@ -47,11 +45,6 @@ describe('Component Tests', () => {
         provide: {
           managedAccountService: () => managedAccountServiceStub,
           alertService: () => new AlertService(),
-
-          accountReclaimPayoutService: () =>
-            sinon.createStubInstance<AccountReclaimPayoutService>(AccountReclaimPayoutService, {
-              retrieve: sinon.stub().resolves({}),
-            } as any),
 
           voteManagerService: () =>
             sinon.createStubInstance<VoteManagerService>(VoteManagerService, {

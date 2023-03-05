@@ -35,10 +35,8 @@
   "relationships": [
     {
       "otherEntityName": "managedAccount",
-      "otherEntityRelationshipName": "accountReclaimPayout",
-      "ownerSide": true,
       "relationshipName": "managedAccount",
-      "relationshipType": "one-to-one"
+      "relationshipType": "many-to-one"
     },
     {
       "otherEntityName": "accountReclaimRequest",

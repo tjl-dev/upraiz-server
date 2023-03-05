@@ -59,13 +59,6 @@
   "readOnly": false,
   "relationships": [
     {
-      "otherEntityName": "vote",
-      "otherEntityRelationshipName": "voteTarget",
-      "ownerSide": false,
-      "relationshipName": "vote",
-      "relationshipType": "one-to-one"
-    },
-    {
       "otherEntityName": "voteManager",
       "otherEntityRelationshipName": "voteTarget",
       "relationshipName": "voteManager",

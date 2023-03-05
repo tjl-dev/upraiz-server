@@ -35,18 +35,16 @@
   "readOnly": false,
   "relationships": [
     {
-      "otherEntityName": "voteTarget",
-      "otherEntityRelationshipName": "vote",
-      "ownerSide": true,
-      "relationshipName": "voteTarget",
-      "relationshipType": "one-to-one"
-    },
-    {
       "otherEntityName": "votePayout",
       "otherEntityRelationshipName": "vote",
       "ownerSide": true,
       "relationshipName": "votePayout",
       "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "voteTarget",
+      "relationshipName": "voteTarget",
+      "relationshipType": "many-to-one"
     },
     {
       "otherEntityName": "voter",

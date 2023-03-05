@@ -4,9 +4,6 @@ import { required } from 'vuelidate/lib/validators';
 
 import AlertService from '@/shared/alert/alert.service';
 
-import AccountReclaimPayoutService from '@/entities/account-reclaim-payout/account-reclaim-payout.service';
-import { IAccountReclaimPayout } from '@/shared/model/account-reclaim-payout.model';
-
 import VoteManagerService from '@/entities/vote-manager/vote-manager.service';
 import { IVoteManager } from '@/shared/model/vote-manager.model';
 
@@ -40,10 +37,6 @@ export default class ManagedAccountUpdate extends Vue {
   @Inject('alertService') private alertService: () => AlertService;
 
   public managedAccount: IManagedAccount = new ManagedAccount();
-
-  @Inject('accountReclaimPayoutService') private accountReclaimPayoutService: () => AccountReclaimPayoutService;
-
-  public accountReclaimPayouts: IAccountReclaimPayout[] = [];
 
   @Inject('voteManagerService') private voteManagerService: () => VoteManagerService;
 
@@ -134,11 +127,6 @@ export default class ManagedAccountUpdate extends Vue {
   }
 
   public initRelationships(): void {
-    this.accountReclaimPayoutService()
-      .retrieve()
-      .then(res => {
-        this.accountReclaimPayouts = res.data;
-      });
     this.voteManagerService()
       .retrieve()
       .then(res => {

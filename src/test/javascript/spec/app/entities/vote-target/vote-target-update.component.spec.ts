@@ -12,8 +12,6 @@ import VoteTargetUpdateComponent from '@/entities/vote-target/vote-target-update
 import VoteTargetClass from '@/entities/vote-target/vote-target-update.component';
 import VoteTargetService from '@/entities/vote-target/vote-target.service';
 
-import VoteService from '@/entities/vote/vote.service';
-
 import VoteManagerService from '@/entities/vote-manager/vote-manager.service';
 import AlertService from '@/shared/alert/alert.service';
 
@@ -48,11 +46,6 @@ describe('Component Tests', () => {
         provide: {
           voteTargetService: () => voteTargetServiceStub,
           alertService: () => new AlertService(),
-
-          voteService: () =>
-            sinon.createStubInstance<VoteService>(VoteService, {
-              retrieve: sinon.stub().resolves({}),
-            } as any),
 
           voteManagerService: () =>
             sinon.createStubInstance<VoteManagerService>(VoteManagerService, {
