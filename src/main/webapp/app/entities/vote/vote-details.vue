@@ -37,22 +37,22 @@
             <span>{{ vote.paid }}</span>
           </dd>
           <dt>
-            <span v-text="$t('upraizApp.vote.voteTarget')">Vote Target</span>
-          </dt>
-          <dd>
-            <div v-if="vote.voteTarget">
-              <router-link :to="{ name: 'VoteTargetView', params: { voteTargetId: vote.voteTarget.id } }">{{
-                vote.voteTarget.id
-              }}</router-link>
-            </div>
-          </dd>
-          <dt>
             <span v-text="$t('upraizApp.vote.votePayout')">Vote Payout</span>
           </dt>
           <dd>
             <div v-if="vote.votePayout">
               <router-link :to="{ name: 'VotePayoutView', params: { votePayoutId: vote.votePayout.id } }">{{
                 vote.votePayout.id
+              }}</router-link>
+            </div>
+          </dd>
+          <dt>
+            <span v-text="$t('upraizApp.vote.voteTarget')">Vote Target</span>
+          </dt>
+          <dd>
+            <div v-if="vote.voteTarget">
+              <router-link :to="{ name: 'VoteTargetView', params: { voteTargetId: vote.voteTarget.id } }">{{
+                vote.voteTarget.id
               }}</router-link>
             </div>
           </dd>

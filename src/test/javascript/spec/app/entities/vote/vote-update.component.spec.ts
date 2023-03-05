@@ -12,9 +12,9 @@ import VoteUpdateComponent from '@/entities/vote/vote-update.vue';
 import VoteClass from '@/entities/vote/vote-update.component';
 import VoteService from '@/entities/vote/vote.service';
 
-import VoteTargetService from '@/entities/vote-target/vote-target.service';
-
 import VotePayoutService from '@/entities/vote-payout/vote-payout.service';
+
+import VoteTargetService from '@/entities/vote-target/vote-target.service';
 
 import VoterService from '@/entities/voter/voter.service';
 import AlertService from '@/shared/alert/alert.service';
@@ -51,13 +51,13 @@ describe('Component Tests', () => {
           voteService: () => voteServiceStub,
           alertService: () => new AlertService(),
 
-          voteTargetService: () =>
-            sinon.createStubInstance<VoteTargetService>(VoteTargetService, {
+          votePayoutService: () =>
+            sinon.createStubInstance<VotePayoutService>(VotePayoutService, {
               retrieve: sinon.stub().resolves({}),
             } as any),
 
-          votePayoutService: () =>
-            sinon.createStubInstance<VotePayoutService>(VotePayoutService, {
+          voteTargetService: () =>
+            sinon.createStubInstance<VoteTargetService>(VoteTargetService, {
               retrieve: sinon.stub().resolves({}),
             } as any),
 

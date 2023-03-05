@@ -43,9 +43,8 @@ public class AccountReclaimPayout implements Serializable {
     @Column(name = "txn_ref", nullable = false)
     private String txnRef;
 
-    @JsonIgnoreProperties(value = { "accountReclaimPayout", "voteManager", "accountReclaimRequests" }, allowSetters = true)
-    @OneToOne
-    @JoinColumn(unique = true)
+    @ManyToOne
+    @JsonIgnoreProperties(value = { "voteManager", "accountReclaimRequests" }, allowSetters = true)
     private ManagedAccount managedAccount;
 
     @JsonIgnoreProperties(value = { "accountReclaimPayout", "managedAccount", "voteManager" }, allowSetters = true)

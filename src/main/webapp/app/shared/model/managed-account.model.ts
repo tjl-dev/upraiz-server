@@ -1,4 +1,3 @@
-import { IAccountReclaimPayout } from '@/shared/model/account-reclaim-payout.model';
 import { IVoteManager } from '@/shared/model/vote-manager.model';
 import { IAccountReclaimRequest } from '@/shared/model/account-reclaim-request.model';
 
@@ -9,7 +8,6 @@ export interface IManagedAccount {
   ccy?: VoteCcy;
   address?: string;
   seed?: string;
-  accountReclaimPayout?: IAccountReclaimPayout | null;
   voteManager?: IVoteManager | null;
   accountReclaimRequests?: IAccountReclaimRequest[] | null;
 }
@@ -21,7 +19,6 @@ export class ManagedAccount implements IManagedAccount {
     public ccy?: VoteCcy,
     public address?: string,
     public seed?: string,
-    public accountReclaimPayout?: IAccountReclaimPayout | null,
     public voteManager?: IVoteManager | null,
     public accountReclaimRequests?: IAccountReclaimRequest[] | null
   ) {}

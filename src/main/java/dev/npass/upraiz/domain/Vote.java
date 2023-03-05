@@ -42,15 +42,14 @@ public class Vote implements Serializable {
     @Column(name = "paid", nullable = false)
     private Boolean paid;
 
-    @JsonIgnoreProperties(value = { "vote", "voteManager" }, allowSetters = true)
-    @OneToOne
-    @JoinColumn(unique = true)
-    private VoteTarget voteTarget;
-
     @JsonIgnoreProperties(value = { "voterAccount", "vote" }, allowSetters = true)
     @OneToOne
     @JoinColumn(unique = true)
     private VotePayout votePayout;
+
+    @ManyToOne
+    @JsonIgnoreProperties(value = { "voteManager" }, allowSetters = true)
+    private VoteTarget voteTarget;
 
     @ManyToOne
     @JsonIgnoreProperties(value = { "voterPreferences", "voterAccounts", "votes" }, allowSetters = true)
@@ -136,19 +135,6 @@ public class Vote implements Serializable {
         this.paid = paid;
     }
 
-    public VoteTarget getVoteTarget() {
-        return this.voteTarget;
-    }
-
-    public void setVoteTarget(VoteTarget voteTarget) {
-        this.voteTarget = voteTarget;
-    }
-
-    public Vote voteTarget(VoteTarget voteTarget) {
-        this.setVoteTarget(voteTarget);
-        return this;
-    }
-
     public VotePayout getVotePayout() {
         return this.votePayout;
     }
@@ -159,6 +145,19 @@ public class Vote implements Serializable {
 
     public Vote votePayout(VotePayout votePayout) {
         this.setVotePayout(votePayout);
+        return this;
+    }
+
+    public VoteTarget getVoteTarget() {
+        return this.voteTarget;
+    }
+
+    public void setVoteTarget(VoteTarget voteTarget) {
+        this.voteTarget = voteTarget;
+    }
+
+    public Vote voteTarget(VoteTarget voteTarget) {
+        this.setVoteTarget(voteTarget);
         return this;
     }
 

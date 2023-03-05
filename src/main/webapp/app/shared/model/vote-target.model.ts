@@ -1,4 +1,3 @@
-import { IVote } from '@/shared/model/vote.model';
 import { IVoteManager } from '@/shared/model/vote-manager.model';
 
 import { VoteTargetType } from '@/shared/model/enumerations/vote-target-type.model';
@@ -15,7 +14,6 @@ export interface IVoteTarget {
   created?: Date | null;
   expiry?: Date | null;
   boosted?: boolean | null;
-  vote?: IVote | null;
   voteManager?: IVoteManager | null;
 }
 
@@ -32,7 +30,6 @@ export class VoteTarget implements IVoteTarget {
     public created?: Date | null,
     public expiry?: Date | null,
     public boosted?: boolean | null,
-    public vote?: IVote | null,
     public voteManager?: IVoteManager | null
   ) {
     this.active = this.active ?? false;

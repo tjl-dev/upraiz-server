@@ -8,17 +8,17 @@
     -->
     <changeSet id="20230212065710-2" author="jhipster">
 
-        <addForeignKeyConstraint baseColumnNames="vote_target_id"
-                                 baseTableName="vote"
-                                 constraintName="fk_vote__vote_target_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="vote_target"/>
-
         <addForeignKeyConstraint baseColumnNames="vote_payout_id"
                                  baseTableName="vote"
                                  constraintName="fk_vote__vote_payout_id"
                                  referencedColumnNames="id"
                                  referencedTableName="vote_payout"/>
+
+        <addForeignKeyConstraint baseColumnNames="vote_target_id"
+                                 baseTableName="vote"
+                                 constraintName="fk_vote__vote_target_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vote_target"/>
 
         <addForeignKeyConstraint baseColumnNames="voter_id"
                                  baseTableName="vote"

@@ -100,19 +100,6 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-control-label" v-text="$t('upraizApp.vote.voteTarget')" for="vote-voteTarget">Vote Target</label>
-            <select class="form-control" id="vote-voteTarget" data-cy="voteTarget" name="voteTarget" v-model="vote.voteTarget">
-              <option v-bind:value="null"></option>
-              <option
-                v-bind:value="vote.voteTarget && voteTargetOption.id === vote.voteTarget.id ? vote.voteTarget : voteTargetOption"
-                v-for="voteTargetOption in voteTargets"
-                :key="voteTargetOption.id"
-              >
-                {{ voteTargetOption.id }}
-              </option>
-            </select>
-          </div>
-          <div class="form-group">
             <label class="form-control-label" v-text="$t('upraizApp.vote.votePayout')" for="vote-votePayout">Vote Payout</label>
             <select class="form-control" id="vote-votePayout" data-cy="votePayout" name="votePayout" v-model="vote.votePayout">
               <option v-bind:value="null"></option>
@@ -122,6 +109,19 @@
                 :key="votePayoutOption.id"
               >
                 {{ votePayoutOption.id }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" v-text="$t('upraizApp.vote.voteTarget')" for="vote-voteTarget">Vote Target</label>
+            <select class="form-control" id="vote-voteTarget" data-cy="voteTarget" name="voteTarget" v-model="vote.voteTarget">
+              <option v-bind:value="null"></option>
+              <option
+                v-bind:value="vote.voteTarget && voteTargetOption.id === vote.voteTarget.id ? vote.voteTarget : voteTargetOption"
+                v-for="voteTargetOption in voteTargets"
+                :key="voteTargetOption.id"
+              >
+                {{ voteTargetOption.id }}
               </option>
             </select>
           </div>

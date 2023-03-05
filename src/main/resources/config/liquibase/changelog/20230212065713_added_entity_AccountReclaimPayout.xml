@@ -27,7 +27,7 @@
                 <constraints nullable="false" />
             </column>
             <column name="managed_account_id" type="bigint">
-                <constraints nullable="true" unique="true" uniqueConstraintName="ux_account_reclaim_payout__managed_account_id" />
+                <constraints nullable="true" />
             </column>
             <column name="vote_manager_id" type="bigint">
                 <constraints nullable="true" />

@@ -6,11 +6,11 @@ import { DATE_TIME_LONG_FORMAT } from '@/shared/date/filters';
 
 import AlertService from '@/shared/alert/alert.service';
 
-import VoteTargetService from '@/entities/vote-target/vote-target.service';
-import { IVoteTarget } from '@/shared/model/vote-target.model';
-
 import VotePayoutService from '@/entities/vote-payout/vote-payout.service';
 import { IVotePayout } from '@/shared/model/vote-payout.model';
+
+import VoteTargetService from '@/entities/vote-target/vote-target.service';
+import { IVoteTarget } from '@/shared/model/vote-target.model';
 
 import VoterService from '@/entities/voter/voter.service';
 import { IVoter } from '@/shared/model/voter.model';
@@ -41,13 +41,13 @@ export default class VoteUpdate extends Vue {
 
   public vote: IVote = new Vote();
 
-  @Inject('voteTargetService') private voteTargetService: () => VoteTargetService;
-
-  public voteTargets: IVoteTarget[] = [];
-
   @Inject('votePayoutService') private votePayoutService: () => VotePayoutService;
 
   public votePayouts: IVotePayout[] = [];
+
+  @Inject('voteTargetService') private voteTargetService: () => VoteTargetService;
+
+  public voteTargets: IVoteTarget[] = [];
 
   @Inject('voterService') private voterService: () => VoterService;
 
@@ -158,15 +158,15 @@ export default class VoteUpdate extends Vue {
   }
 
   public initRelationships(): void {
-    this.voteTargetService()
-      .retrieve()
-      .then(res => {
-        this.voteTargets = res.data;
-      });
     this.votePayoutService()
       .retrieve()
       .then(res => {
         this.votePayouts = res.data;
+      });
+    this.voteTargetService()
+      .retrieve()
+      .then(res => {
+        this.voteTargets = res.data;
       });
     this.voterService()
       .retrieve()

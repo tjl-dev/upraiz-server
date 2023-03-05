@@ -122,8 +122,8 @@ relationship OneToMany {
   Voter to Vote
 }
 
-relationship OneToOne {
-  Vote to VoteTarget
+relationship ManyToOne {
+  Vote{voteTarget} to VoteTarget
 }
   
 relationship OneToOne {
@@ -146,8 +146,8 @@ relationship OneToOne {
   AccountReclaimRequest to AccountReclaimPayout
 }
 
-relationship OneToOne {
-  AccountReclaimPayout to ManagedAccount
+relationship ManyToOne {
+  AccountReclaimPayout{managedAccount} to ManagedAccount
 }
 
 relationship OneToMany {

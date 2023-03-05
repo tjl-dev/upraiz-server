@@ -28,7 +28,6 @@
       "created": "Created",
       "expiry": "Expiry",
       "boosted": "Boosted",
-      "vote": "Vote",
       "voteManager": "Vote Manager"
     }
   }

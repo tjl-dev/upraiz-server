@@ -8,8 +8,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import org.slf4j.Logger;
@@ -154,18 +152,10 @@ public class ManagedAccountResource {
     /**
      * {@code GET  /managed-accounts} : get all the managedAccounts.
      *
-     * @param filter the filter of the request.
      * @return the {@link ResponseEntity} with status {@code 200 (OK)} and the list of managedAccounts in body.
      */
     @GetMapping("/managed-accounts")
-    public List<ManagedAccount> getAllManagedAccounts(@RequestParam(required = false) String filter) {
-        if ("accountreclaimpayout-is-null".equals(filter)) {
-            log.debug("REST request to get all ManagedAccounts where accountReclaimPayout is null");
-            return StreamSupport
-                .stream(managedAccountRepository.findAll().spliterator(), false)
-                .filter(managedAccount -> managedAccount.getAccountReclaimPayout() == null)
-                .collect(Collectors.toList());
-        }
+    public List<ManagedAccount> getAllManagedAccounts() {
         log.debug("REST request to get all ManagedAccounts");
         return managedAccountRepository.findAll();
     }

@@ -56,7 +56,7 @@ public class Voter implements Serializable {
 
     @OneToMany(mappedBy = "voter")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    @JsonIgnoreProperties(value = { "voteTarget", "votePayout", "voter" }, allowSetters = true)
+    @JsonIgnoreProperties(value = { "votePayout", "voteTarget", "voter" }, allowSetters = true)
     private Set<Vote> votes = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
